@@ -2,42 +2,41 @@
 <html>
 
 <head>
-	<title>Calculator App</title>
-	<link href="styles.css" rel="stylesheet" type="text/css" />
+	<title>Number Calculator</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+  <h1>Number Calculator</h1>
+	<form>
+		<div class="row">
+			<label for="number1">First Number:</label>
+      <input type="text" name="number1" id="number1" placeholder="1st number" />
+    </div>
+		<div class="row">
+			<label for="operation">Operation:</label>
+      <select name="operation" id="operation">
+        <option disabled selected>-- select an operation --</option>
+        <option value="+"><b>+</b> (sum)</option>
+        <option value="-"><b>-</b> (subtract)</option>
+        <option value="*"><b>*</b> (multiply)</option>
+        <option value="/"><b>/</b> (divide)</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="number2">Second Number:</label>
+      <input type="text" name="number2" id="number2" placeholder="2nd number" />
+    </div>
+    <div class="buttons-bar">
+      <input type="button" value="Calculate" id="calcButton" />
+      <input type="Reset" value="Reset" id="resetButton" />
+    </div>
+  </form>
 
-  <section id="screenNumberCalc">
-    <h1>Number Calculator</h1>
-    <form>
-      <div class="row">
-        <label for="number1">First Number:</label>
-        <input type="text" id="number1" placeholder="1st number" />
-      </div>
-      <div class="row">
-        <label for="operation">Operation:</label>
-        <select id="operation">
-          <option disabled selected>-- select an operation --</option>
-          <option value="+"><b>+</b> (sum)</option>
-          <option value="-"><b>-</b> (subtract)</option>
-          <option value="*"><b>*</b> (multiply)</option>
-          <option value="/"><b>/</b> (divide)</option>
-        </select>
-      </div>
-      <div class="row">
-        <label for="number2">Second Number:</label>
-        <input type="text" id="number2" placeholder="2nd number" />
-      </div>
-      <div class="buttons-bar">
-        <input type="button" value="Calculate" />
-        <input type="reset" value="Reset" />
-      </div>
-    </form>
-    <div class="result" />
-  </section>
+  <div id="result">
+  </div>
 
-  <script src="nums-calc.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
