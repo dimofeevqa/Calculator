@@ -1,17 +1,12 @@
-let num1Field = 
-  document.querySelector("#screenNumberCalc #number1");
-let num2Field = 
-  document.querySelector("#screenNumberCalc #number2");
-let operationField = 
-  document.querySelector("#screenNumberCalc #operation");
-let resultNumsField = 
-  document.querySelector("#screenNumberCalc div.result");
-let numsCalcButton = 
-  document.querySelector("#screenNumberCalc input[value='Calculate']");
-let numsResetButton = 
-  document.querySelector("#screenNumberCalc input[value='Reset']");
+let num1Field = document.getElementById('number1');
+let num2Field = document.getElementById('number2');
+let operationField = document.getElementById('operation');
+let resultField = document.getElementById('result');
 
-numsCalcButton.onclick =  function() {
+document.getElementById('calcButton').onclick = calculate;
+document.getElementById('resetButton').onclick = resetNumbers;
+
+function calculate() {
   let num1 = parseFloat(num1Field.value);
   let num2 = parseFloat(num2Field.value);
   let op = operationField.value;
@@ -32,9 +27,9 @@ numsCalcButton.onclick =  function() {
     result = "<i>invalid calculation</i>";
   if (typeof(result) == "number")
     result = '<pre>' + parseFloat(result.toPrecision(12)) + '</pre>';
-  resultNumsField.innerHTML = "<h4>Result:</h4> " + result;
-};
+  resultField.innerHTML = "<h4>Result:</h4> " + result;
+}
 
-numsResetButton.onclick = function() {
-  resultNumsField.innerHTML = '';
+function resetNumbers() {
+  resultField.innerHTML = '';
 }
