@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calculator App</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <section id="screenNumberCalc">
+    <h1>Number Calculator</h1>
+    <form>
+      <div class="row">
+        <label for="number1">First Number:</label>
+        <input type="text" id="number1" placeholder="1st number" />
+      </div>
+      <div class="row">
+        <label for="operation">Operation:</label>
+        <select id="operation">
+          <option disabled selected>-- select an operation --</option>
+          <option value="+"><b>+</b> (sum)</option>
+          <option value="-"><b>-</b> (subtract)</option>
+          <option value="*"><b>*</b> (multiply)</option>
+          <option value="/"><b>/</b> (divide)</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="number2">Second Number:</label>
+        <input type="text" id="number2" placeholder="2nd number" />
+      </div>
+      <div class="buttons-bar">
+        <input type="button" value="Calculate" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+    <div class="result" />
+  </section>
+
+  <script src="nums-calc.js"></script>
+</body>
+
+</html>
